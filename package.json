@@ -1,0 +1,21 @@
+{
+  "name": "com.poseidon.poseidonframework",
+  "version": "1.0.0",
+  "displayName": "Poseidon Framework",
+  "description": "Super powerful framework for building apps in Unity. Requires Odin, DOTween and UniTask.",
+  "unity": "2020.3",
+  "unityRelease": "27f1",
+  "dependencies": {
+	"com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask"
+  },
+  "keywords": [
+    "framework",
+    "core",
+    "poseidon"
+  ],
+  "author": {
+    "name": "Poseidon",
+    "email": "",
+    "url": ""
+  }
+}
