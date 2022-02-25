@@ -6,6 +6,8 @@
   "unity": "2020.3",
   "unityRelease": "19f1",
   "dependencies": {
+	"com.unity.textmeshpro": "3.0.6",
+	"com.unity.inputsystem": "1.0.2"
   },
   "keywords": [
     "framework",
