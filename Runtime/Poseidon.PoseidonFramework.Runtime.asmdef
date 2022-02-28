@@ -6,7 +6,8 @@
         "Unity.TextMeshPro",
         "DOTween.Modules",
         "UniTask.DOTween",
-		"Unity.InputSystem"
+		"Unity.InputSystem",
+		"MEC"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
