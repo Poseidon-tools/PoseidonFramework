@@ -2,10 +2,11 @@
     "name": "Poseidon.PoseidonFramework.Runtime",
     "rootNamespace": "",
     "references": [
-        "GUID:f51ebe6a0ceec4240a699833d6309b23",
-        "GUID:6055be8ebefd69e48b49212b09b47b2f",
-        "GUID:e4364b027bad55146803efaf73e99b09",
-        "GUID:029c1c1b674aaae47a6841a0b89ad80e"
+        "UniTask",
+        "Unity.TextMeshPro",
+        "DOTween.Modules",
+        "UniTask.DOTween",
+		"Unity.InputSystem"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
