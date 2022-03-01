@@ -66,20 +66,27 @@
         {
             //Debug.Log($"Searching in {target.name}, parent: {parentNode.Resolver.name}");
             var childCount = target.childCount;
+            InseminatorDependencyResolver resolver = null;
+            resolver = target.GetComponent<InseminatorDependencyResolver>();
+            ResolverTreeNode newParentNode = parentNode;
+            if (resolver != null && !(resolver is SceneDependencyResolver))
+            {
+                newParentNode = AddNode(parentNode, resolver);
+            }
             for (int i = 0; i < childCount; i++)
             {
                 var child = target.GetChild(i);
-                var resolver = child.GetComponent<InseminatorDependencyResolver>();
+                resolver = child.GetComponent<InseminatorDependencyResolver>();
                 if (resolver is SceneDependencyResolver)
                 {
                     continue;
                 }
                 if (resolver == null)
                 {
-                    SearchForResolver(child, parentNode);
+                    SearchForResolver(child, newParentNode);
                     continue;
                 }
-                var newParentNode = AddNode(parentNode, resolver);
+                newParentNode = AddNode(parentNode, resolver);
                 SearchForResolver(child, newParentNode);
             }
         }

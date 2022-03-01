@@ -25,13 +25,22 @@
         {
             base.Install(installers);
             
-            registeredDependencies.Add(typeof(InseminatorDependencyResolver), new List<InstallerEntity>
+            if(!registeredDependencies.ContainsKey(typeof(InseminatorDependencyResolver)))
             {
-                new InstallerEntity
+                registeredDependencies.Add(typeof(InseminatorDependencyResolver), new List<InstallerEntity>
                 {
-                    Id = "",
-                    ObjectInstance = this
-                }
+                    new InstallerEntity
+                    {
+                        Id = "",
+                        ObjectInstance = this
+                    }
+                });
+                return;
+            }
+            registeredDependencies[typeof(InseminatorDependencyResolver)].Add(new InstallerEntity
+            {
+                Id = "",
+                ObjectInstance = this
             });
         }
 
